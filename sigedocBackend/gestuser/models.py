@@ -10,6 +10,9 @@ class Usergroup(models.Model):
     group_desc = models.TextField(blank=True, null=True)
     date_created = models.DateTimeField(auto_now_add=True)
     date_updated = models.DateTimeField(auto_now=True)
+    
+    def __str__(self):
+            return f"{self.group_name}, {self.group_desc}"
 
 class User(models.Model):
     title             = models.CharField(max_length=10,blank=True,null=True)

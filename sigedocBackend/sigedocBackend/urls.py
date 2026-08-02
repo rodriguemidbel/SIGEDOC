@@ -8,6 +8,7 @@ from sigedocBackend import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('api/params/', include('params.routers')),
     path('api/gestuser/', include('gestuser.routers')),
     #--------------
     path('api/gestuser/connect_user',    views.connect_user,    name='connect_user'),
